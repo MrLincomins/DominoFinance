@@ -25,7 +25,22 @@ Route::get('/', function () {
     return view('main');
 });
 
+
+Route::get('/games/toystore', function () {
+    return view('toystore');
+});
+
+Route::get('/games/toystore', function () {
+    return view('toystore');
+});
+
+Route::get('/games/toystore', function () {
+    return view('toystore');
+});
+
+
 Route::post('/account/registration', [AccountController::class, 'registration']);
+Route::post('/account/login', [AccountController::class, 'login']);
 
 
 Route::get('/account', function () {

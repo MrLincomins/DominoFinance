@@ -53,9 +53,43 @@ class AccountController extends Controller
         }
     }
 
-    public function login($mail, $password): bool
+    public function endSession(): void
     {
-        $user = DB::table('users')->where('mail', '=', $mail)->get();
+        Cookie::make('name', 0, 0);
+        Cookie::make('age', 0, 0);
+        Cookie::make('mail', 0, 0);
+        Cookie::make('password', 0, 0);
+        Cookie::make('level', 0, 0);
+        Cookie::make('password', 0, 0);
+        Cookie::make('points', 0, 0);
+    } //Переделать
+
+    public function login(Request $request): bool
+    {
+        $this->endSession();
+        $mail = $request->json('mail');
+        $password = $request->json('password');
+        $user = json_decode(DB::table('users')->where('mail', '=', $mail)->get(), true)[0];
+        if (password_verify($password, $user['password'])) {
+            $this->cookiesAdder($user['name'], $user['age'], $user['mail'], $user['level'], $user['password'], $user['points']);
+            return True;
+        } else {
+            return False;
+        }
+    }
+
+    public function checkSession(): void
+    {
+        $user = json_decode(DB::table('users')->where('mail', '=', Cookie::get('mail'))->get(), true)[0];
+        if(!empty($user)) {
+            if(!Cookie::get('name') == $user['name']
+                and !Cookie::get('level') == $user['level']
+                and !Cookie::get('age') == $user['age']
+                and !password_verify(Cookie::get('password'), $user['password'])){
+                //help
+                $this->endSession();
+            }
+        }
     }
 
 }

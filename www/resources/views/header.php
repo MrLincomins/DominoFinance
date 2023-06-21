@@ -88,14 +88,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="login">
                     <div class="form-group">
-                        <label for="fullNameLogin">ФИО</label>
-                        <input type="text" class="form-control" id="fullNameLogin" required>
+                        <label for="fullNameLogin">Почта</label>
+                        <input name="mail" type="text" class="form-control" id="mail" required>
                     </div>
                     <div class="form-group">
                         <label for="passwordLogin">Пароль</label>
-                        <input type="password" class="form-control" id="passwordLogin" required>
+                        <input name="password" type="password" class="form-control" id="password" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Войти</button>
                 </form>
@@ -109,10 +109,11 @@
         event.preventDefault();
         const formData = new FormData(form);
         const name = formData.get('name');
+        const mail = formData.get('mail');
         const password = formData.get('password');
         const age = formData.get('age');
         const level = formData.get('level');
-        const jsonData = JSON.stringify({'name' : name, 'age' : age, 'level' : level, 'password' : password});
+        const jsonData = JSON.stringify({'name' : name, 'mail' : mail, 'age' : age, 'level' : level, 'password' : password});
 
         fetch('/account/registration', {
             method: 'POST',
@@ -125,6 +126,25 @@
             .then(data => console.log(data))
             .catch(error => console.error(error));
     });
+
+    const formLogin = document.getElementById('login');
+    formLogin.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(formLogin);
+        const mail = formData.get('mail');
+        const password = formData.get('password');
+        const jsonDatal = JSON.stringify({'mail' : mail,  'password' : password});
+
+        fetch('/account/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonDatal
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+    });
 </script>
-<!-- Футер -->
 </body>

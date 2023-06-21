@@ -16,10 +16,10 @@
         <!-- Карточка для дошкольного уровня -->
         <div class="col-md-4">
             <div class="card mb-4">
-                <img src="path_to_image1.jpg" class="card-img-top" alt="Игра 1">
+                <img href="/games/toystore" src="resources/photo/toystore.jpg" width="100" height="400" class="card-img-top" alt="Игра 1">
                 <div class="card-body">
-                    <h5 class="card-title">Название игры 1</h5>
-                    <p class="card-text">Описание игры 1</p>
+                    <h5 href="/games/toystore" class="card-title">Магазин игрушек</h5>
+                    <p href="/games/toystore" class="card-text">Развивающая игра для долшколят</p>
                 </div>
             </div>
         </div>
