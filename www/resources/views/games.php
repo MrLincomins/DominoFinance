@@ -14,15 +14,6 @@
     <div class="row mt-5">
 
         <!-- Карточка для дошкольного уровня -->
-        <div href="/games/toystore"  class="col-md-4">
-            <div href="/games/toystore" class="card mb-4">
-                <img href="/games/toystore" src="resources/photo/toystore.jpg" width="100" height="400" class="card-img-top" alt="Игра 1">
-                <div href="/games/toystore" class="card-body">
-                    <h5 href="/games/toystore" class="card-title">Магазин игрушек</h5>
-                    <p href="/games/toystore" class="card-text">Развивающая игра для дошколят</p>
-                </div>
-            </div>
-        </div>
 
         <!-- Карточка для школьного уровня -->
         <div class="col-md-4">
@@ -38,15 +29,10 @@
         </div>
 
         <!-- Карточка для студенческого уровня -->
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <img src="path_to_image3.jpg" class="card-img-top" alt="Игра 3">
-                <div class="card-body">
-                    <h5 class="card-title">Финансовый квест</h5>
-                    <p class="card-text">Описание игры 3</p>
-                </div>
-            </div>
-        </div>
+        <a href="/investorsimulator">Симулятор инвестора</a>
+        <a href="/companyman">Бизнесменщик</a>
+        <a href="/finansequest">Финансовый квест</a>
+        <a href="/whatcostmore">Что стоит больше?</a>
 
     </div>
 </div>

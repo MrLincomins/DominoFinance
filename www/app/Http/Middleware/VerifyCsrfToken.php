@@ -14,6 +14,9 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         //
         'http://localhost/account/registration',
-        'http://localhost/account/login'
+        'http://localhost/account/login',
+        'http://localhost/account/contact',
+        'http://localhost/games/points',
+        'http://localhost/buy'
     ];
 }

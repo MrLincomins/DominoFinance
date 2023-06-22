@@ -39,6 +39,22 @@
         </div>
     </div>
 </div>
+<button id="aboba">Удалить стиль</button>
+
+<script>
+    // Функция для удаления куки
+    function deleteCookie() {
+        <?php echo setcookie('css', 'sponge', time()+0, "/"); ?>
+        alert('Куки успешно удалены!');
+        location.reload();
+    }
+
+    // Получаем кнопку по идентификатору
+    var button = document.getElementById('aboba');
+
+    // Добавляем обработчик события на клик по кнопке
+    button.addEventListener('click', deleteCookie);
+</script>
 <!-- Подключение скриптов Bootstrap -->
 </body>
 </html>

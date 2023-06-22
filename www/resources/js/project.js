@@ -36,7 +36,7 @@ handleSubmitForm('registration', '/account/registration', 'Вы успешно �
 
 handleSubmitForm('login', '/account/login', 'Вы успешно вошли!', 'Ошибка, неверный пароль или почта');
 
-handleSubmitForm('contact', '/account/contact', 'Вы успешно изменили данные!', 'Ой, возникла какая-то ошибка...');
+handleSubmitForm('contact', '/account/contact', 'Вы успешно изменили данные!', 'В изменении данных произошла ошибка, возможно email уже зарегистрирован.');
 
 window.onload = function() {
     const popupMessage = sessionStorage.getItem('popupMessage');

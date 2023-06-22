@@ -43,15 +43,15 @@
                 <form id="contact">
                     <div class="form-group">
                         <label for="fullName">ФИО</label>
-                        <input type="text" class="form-control" id="fullName" required>
+                        <input name="name" type="text" class="form-control" id="fullName" required>
                     </div>
                     <div class="form-group">
                         <label for="age">Возраст</label>
-                        <input type="number" class="form-control" id="age" required>
+                        <input name="age" type="number" class="form-control" id="age" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Почта</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input name="mail" type="email" class="form-control" id="email" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Сохранить изменения</button>
                 </form>

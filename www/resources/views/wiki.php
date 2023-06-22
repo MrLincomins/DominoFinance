@@ -46,7 +46,7 @@
                     <ul class="list-group" id="financeList">
                         <li class="list-group-item" data-toggle="collapse" data-target="#term1">
                             <div>
-                                <strong>Термин 1:</strong> Клиринг
+                                <strong>Клиринг</strong>
                             </div>
                             <div>
                                 <span class="badge badge-primary">Финансы</span>
@@ -64,7 +64,7 @@
                     <ul class="list-group" id="macroList">
                         <li class="list-group-item" data-toggle="collapse" data-target="#term2">
                             <div>
-                                <strong>Термин 2:</strong> Инфляция
+                                <strong>Инфляция</strong>
                             </div>
                             <div>
                                 <span class="badge badge-primary">Макроэкономика</span>
@@ -78,7 +78,7 @@
                         </div>
                         <li class="list-group-item" data-toggle="collapse" data-target="#term5">
                             <div>
-                                <strong>Термин 5:</strong> Государственный долг
+                                <strong> Государственный долг</strong>
                             </div>
                             <div>
                                 <span class="badge badge-primary">Макроэкономика</span>
@@ -96,7 +96,7 @@
                     <ul class="list-group" id="instrumentList">
                         <li class="list-group-item" data-toggle="collapse" data-target="#term3">
                             <div>
-                                <strong>Термин 3:</strong> Инвестиции
+                                <strong>Инвестиции</strong>
                             </div>
                             <div>
                                 <span class="badge badge-primary">Финансовые инструменты</span>
@@ -111,7 +111,7 @@
                         </div>
                         <li class="list-group-item" data-toggle="collapse" data-target="#term4">
                             <div>
-                                <strong>Термин 4:</strong> Кредит
+                                <strong>Кредит</strong>
                             </div>
                             <div>
                                 <span class="badge badge-primary">Финансовые инструменты</span>

@@ -1,11 +1,35 @@
 <?php use Illuminate\Support\Facades\Auth; ?>
 <link rel="stylesheet" href="resources/css/boostrap.min.css">
 <link rel="stylesheet" href="resources/css/project.css">
+<style>
+    <?php if(@$_COOKIE['css'] == 'sponge'):?>
+    body {
+        background-color: yellow;
+        color: #000;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
 
+    :hover {
+        background-color: #FEEC00;
+        color: #000;
+        cursor: pointer;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    <?php endif; ?>
+</style>
 <body>
 <!-- Навигационная панель -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand display-8" href="#">Домино Финанс</a>
+    <a class="navbar-brand display-8" href="/">Домино Финанс</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,9 +43,11 @@
                 <a class="nav-link" href="/wiki">Финансовый словарь</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/store">Магазин</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/games">Игры</a>
             </li>
-
 
             <?php if (Auth::check()): ?>
                 <li class="nav-item">
@@ -99,7 +125,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="loginModalLabel">Вход</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times</span>
                 </button>
             </div>
             <div class="modal-body">

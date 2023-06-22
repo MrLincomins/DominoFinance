@@ -19,6 +19,7 @@
             <tr>
                 <th>Компания</th>
                 <th>Цена</th>
+                <th>Кол-во акций</th>
             </tr>
             </thead>
             <tbody id="stock-prices"></tbody>
@@ -49,6 +50,7 @@
 </div>
 
 <script>
+    alert('Цель игры - достичь суммы денег 2000$')
     let balance = 1000;
     let stock_price = { "APPLE": 150, "GOOGLE": 200, "TESLA": 250 };
     let inventory = { "APPLE": 0, "GOOGLE": 0, "TESLA": 0 };
@@ -133,7 +135,8 @@
         updateBalanceInfo();
 
         // Проверить, достигнута ли победа
-        if (balance >= 10000) {
+        if (balance >= 2000) {
+            sendPoints(100)
             alert("Поздравляем! Вы победили в игре фондовый рынок!");
             document.getElementById("game-interface").style.display = "none";
         }
@@ -199,6 +202,6 @@
 
 </script>
 </body>
-
 </html>
+<script src="resources/js/points.js"></script>
 <?php require_once 'footer.php'; ?>

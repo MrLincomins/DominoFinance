@@ -3,7 +3,6 @@
 <html>
 <head>
     <title>Игра по финансовой грамотности</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container mt-5">
@@ -21,7 +20,7 @@
 </div>
 </html>
 
-
+<script src="resources/js/points.js"></script>
 <script>
     let puzzles = [
         {
@@ -104,11 +103,9 @@
             setTimeout(show_next_puzzle, 2000);
         }
     }
-
     function show_next_puzzle() {
         let puzzle = select_puzzle();
         document.getElementById("question").innerHTML = puzzle.question;
-
         let optionsContainer = document.getElementById("options-container");
         optionsContainer.innerHTML = "";
 
@@ -132,7 +129,7 @@
     }
 
     function show_answers() {
-        let answerSummary = document.getElementById("answer-summary");
+        let answerSummary = document.getElementById("answer-summary")
         answerSummary.innerHTML = "Правильные ответы:<br>";
         for (let i = 0; i < puzzles.length; i++) {
             let puzzle = puzzles[i];

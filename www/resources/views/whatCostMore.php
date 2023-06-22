@@ -10,7 +10,6 @@
         .container {
             max-width: 800px;
         }
-
         .correct-answer {
             color: green;
         }
@@ -87,6 +86,7 @@
             document.getElementById("options-container").innerHTML = "";
             document.getElementById("start-button").style.display = "inline-block";
             document.getElementById("score-message").textContent = `Итоговый счет: ${score}`;
+            sendPoints(score * 10)
         } else {
             let [item1, item2] = getTwoRandomItems();
             document.getElementById("question").textContent = `Что стоит дороже? ${item1} или ${item2}`;
@@ -127,6 +127,6 @@
     document.getElementById("start-button").addEventListener("click", startGame);
 </script>
 </body>
-
+<script src="resources/js/points.js"></script>
 </html>
 <?php require_once 'footer.php'; ?>

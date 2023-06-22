@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\SearchController;
+
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\PointController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,25 +21,22 @@ use Illuminate\Support\Facades\Route;
 //});
 //
 //Route::post('/', [SearchController::class, 'search']);
-
-
 Route::get('/', function () {
     return view('main');
 });
+Route::post('/buy', [AccountController::class, 'buyContent']);
 
 
-Route::get('/games/toystore', function () {
-    return view('toystore');
+
+Route::post('/games/points', [AccountController::class, 'storePoints']);
+
+Route::get('/store', function () {
+    return view('store');
 });
-
-Route::get('/games/toystore', function () {
-    return view('toystore');
-});
-
-
 Route::get('/investorsimulator', function () {
     return view('investorSimulator');
 });
+
 
 Route::get('/companyman', function () {
     return view('compman');
@@ -54,6 +53,8 @@ Route::get('/whatcostmore', function () {
 
 Route::post('/account/registration', [AccountController::class, 'registration']);
 Route::post('/account/login', [AccountController::class, 'login']);
+
+Route::post('/account/contact', [AccountController::class, 'updateUser']);
 
 
 Route::get('/account', function () {

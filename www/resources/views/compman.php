@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Моя компьютерная игра</title>
+    <title>Бизнесменщик</title>
     <style>
         .popup-content {
             text-align: center;
@@ -14,11 +14,14 @@
             right: 10px;
             cursor: pointer;
         }
+        .modal-backdrop {
+            background: none !important;
+        }
     </style>
 </head>
 <body>
 <div class="container jumbotron" >
-    <h1>Моя компьютерная игра</h1>
+    <h1>Бизнесменщик</h1>
 
     <div>
         <button class="btn btn-primary" id="createCompanyBtn" data-toggle="tooltip" data-placement="top" title="Создать компанию">Создать компанию</button>
@@ -164,7 +167,7 @@
     function createCompany() {
         alert('Компания успешно создана!');
         balance = 5000;
-        income = 3000;
+        income = 30;
         company_quality = 1;
         workersLevel = 1;
         managementLevel = 1;
@@ -259,6 +262,7 @@
                 updateDisplay();
                 alert('Новая компания куплена!');
                 document.getElementById('purchasePopup').style.display = 'block';
+                sendPoints(100);
                 setTimeout(function() {
                     document.getElementById('purchasePopup').style.display = 'none';
                 }, 8000);  // Окно исчезнет через 2 секунды
@@ -280,12 +284,28 @@
         });
     });
     document.querySelector('.loading-overlay').style.display = 'none';
-    document.querySelector('.loading-overlay').style.display = 'none';
-    document.querySelector('.loading-overlay').style.display = 'none';
-    document.querySelector('.loading-overlay').style.display = 'none';
-    document.querySelector('.loading-overlay').style.display = 'none';
+    function removeModalOpenClass() {
+        document.body.classList.remove('modal-open');
+    }
+
+
+    function hideModal() {
+        document.querySelectorAll('.modal-backdrop').forEach(function (element) {
+            element.classList.remove('show');
+        });
+        removeModalOpenClass();
+    }
+
+
+    document.querySelectorAll('[data-dismiss="modal"]').forEach(function (element) {
+        element.addEventListener('click', function () {
+            this.closest('.modal').style.display = 'none';
+            hideModal();
+        });
+    });
 
 </script>
+<script src="resources/js/points.js"></script>
 </body>
 </html>
 <?php require_once 'footer.php'; ?>
