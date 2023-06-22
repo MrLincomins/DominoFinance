@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
@@ -9,17 +11,18 @@ use Illuminate\Support\Facades\DB;
 
 class AccountController extends Controller
 {
-    public function registration(Request $request): bool
+
+    //docker exec -i chatbot-php php artisan make:migration create_users_table
+
+    public function registration(Request $request): string
     {
         $name = $request->json('name');
         $age = $request->json('age');
         $mail = $request->json('mail');
-        $level = $request->json('level');
+        $level = 0;
         if($this->checkRegistration($mail)) {
-
             $password = password_hash($request->json('password'), PASSWORD_BCRYPT);
-            $this->cookiesAdder($name, $age, $mail ,$level, $password, 0);
-            DB::table('users')->insert([
+            $user = User::create([
                 'name' => $name,
                 'age' => $age,
                 'level' => $level,
@@ -27,68 +30,51 @@ class AccountController extends Controller
                 'password' => $password,
                 'points' => 0
             ]);
+
+            Auth::login($user);
+
             return True;
         } else {
-            return False;
+            return '0';
         }
-    }
-
-    public function cookiesAdder($name, $age, $mail, $level, $password, $points): void
-    {
-        Cookie::make('name', $name, 43800);
-        Cookie::make('age', $age, 43800);
-        Cookie::make('mail', $mail, 43800);
-        Cookie::make('password', $password, 43800);
-        Cookie::make('level', $level, 43800);
-        Cookie::make('password', $password, 43800);
-        Cookie::make('points', $points, 43800);
     }
 
     public function checkRegistration($mail): bool
     {
-        if(DB::table('users')->where('mail','=', $mail)->exists()){
+        if(!empty(User::all()->where('mail','=', $mail))){
             return False;
-        } else {
+        } else{
             return True;
         }
     }
 
-    public function endSession(): void
+    public function endSession(): \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\Foundation\Application
     {
-        Cookie::make('name', 0, 0);
-        Cookie::make('age', 0, 0);
-        Cookie::make('mail', 0, 0);
-        Cookie::make('password', 0, 0);
-        Cookie::make('level', 0, 0);
-        Cookie::make('password', 0, 0);
-        Cookie::make('points', 0, 0);
-    } //Переделать
+        Auth::logout();
+        return redirect('/');
+    } //Кайфвырь
 
-    public function login(Request $request): bool
+
+    public function login(Request $request)
     {
         $this->endSession();
         $mail = $request->json('mail');
         $password = $request->json('password');
-        $user = json_decode(DB::table('users')->where('mail', '=', $mail)->get(), true)[0];
-        if (password_verify($password, $user['password'])) {
-            $this->cookiesAdder($user['name'], $user['age'], $user['mail'], $user['level'], $user['password'], $user['points']);
-            return True;
+
+        if (Auth::attempt(['mail' => $mail, 'password' => $password])) {
+            return response()->json(true);
         } else {
-            return False;
+            return response()->json('none');
         }
     }
 
+
+
     public function checkSession(): void
     {
-        $user = json_decode(DB::table('users')->where('mail', '=', Cookie::get('mail'))->get(), true)[0];
-        if(!empty($user)) {
-            if(!Cookie::get('name') == $user['name']
-                and !Cookie::get('level') == $user['level']
-                and !Cookie::get('age') == $user['age']
-                and !password_verify(Cookie::get('password'), $user['password'])){
-                //help
-                $this->endSession();
-            }
+        if (!Auth::check()) {
+            // Пользователь не авторизован, выполните нужные действия
+            $this->endSession();
         }
     }
 

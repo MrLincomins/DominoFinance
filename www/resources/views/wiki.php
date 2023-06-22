@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Финансовая грамотность для детей - Финансовый словарь</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .list-group-item {
             display: flex;
@@ -26,18 +25,24 @@
             cursor: pointer;
             font-weight: bold;
         }
+
+        .jumbotron {
+            background-position: left top, right top;
+        }
+
     </style>
 </head>
 
 <body>
 <div class="container">
-    <h1 class="text-center mt-5">Финансовый словарь</h1>
+    <div class="jumbotron text-center mt-4" style="background-image: url('resources/photo/test.jpg')">
+    <h1 class="text-center display-4 mt-6">Финансовый словарь</h1>
     <input type="text" class="form-control search-input" id="searchInput" placeholder="Поиск термина...">
+    </div>
     <div class="row mt-5">
         <div class="col-md-12">
             <div class="column-wrapper">
                 <div class="column">
-                    <h4>Финансы</h4>
                     <ul class="list-group" id="financeList">
                         <li class="list-group-item" data-toggle="collapse" data-target="#term1">
                             <div>
@@ -56,7 +61,6 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <h4>Макроэкономика</h4>
                     <ul class="list-group" id="macroList">
                         <li class="list-group-item" data-toggle="collapse" data-target="#term2">
                             <div>
@@ -89,7 +93,6 @@
                     </ul>
                 </div>
                 <div class="column">
-                    <h4>Финансовые инструменты</h4>
                     <ul class="list-group" id="instrumentList">
                         <li class="list-group-item" data-toggle="collapse" data-target="#term3">
                             <div>
@@ -128,10 +131,6 @@
     </div>
 </div>
 
-<!-- Подключение скриптов Bootstrap и скрипта для поиска и фильтрации -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     // Функция для фильтрации терминов по введенному тексту в поле поиска
     function filterTerms() {

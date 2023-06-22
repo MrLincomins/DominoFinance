@@ -16,9 +16,9 @@ class Player {
         if (this.currency >= toy.price) {
             this.inventory.push(toy);
             this.currency -= toy.price;
-            console.log(${this.name} купил ${toy.name} за ${toy.price}.);
+            showMessage(`${this.name} купил ${toy.name} за ${toy.price}.`, 'success');
         } else {
-            console.log("Insufficient funds.");
+            showMessage("Недостаточно средств.", 'error');
         }
     }
 
@@ -27,21 +27,17 @@ class Player {
         if (index !== -1) {
             this.inventory.splice(index, 1);
             this.currency += toy.price;
-            console.log(${this.name} продал ${toy.name} за ${toy.price}.);
+            showMessage(`${this.name} продал ${toy.name} за ${toy.price}.`, 'success');
         } else {
-            console.log("Игрушка не найдена в инвентаре.");
+            showMessage("Игрушка не найдена в инвентаре.", 'error');
         }
     }
 
     showInventory() {
-        console.log(Инвентарь игрока ${this.name}:);
-        for (const toy of this.inventory) {
-            console.log(toy.name);
-        }
+        showMessage(`Инвентарь игрока ${this.name}:<br>${this.inventory.map(toy => toy.name).join('<br>')}`, 'info');
     }
 }
 
-// Toy catalog
 const toys = [
     new Toy("Мишка", 10),
     new Toy("Кукла", 15),
@@ -50,53 +46,69 @@ const toys = [
     new Toy("Пазл", 8)
 ];
 
-// Game setup
-const player_name = prompt("Введи своё имя:");
-const currency = parseInt(prompt("Начальное кол-во денег:"));
+const player_name = prompt("Введите свое имя:");
+const currency = parseInt(prompt("Начальное количество денег:"));
 const player = new Player(player_name, currency);
-console.log(Добро пожаловать в магазин игрушек, ${player.name}!);
+showMessage(`Добро пожаловать в магазин игрушек, ${player.name}!`, 'info');
 
-// Game loop
-while (true) {
-    console.log("\n==== Действия ====");
-    console.log("1. Купить игрушку");
-    console.log("2. Продать игрушку");
-    console.log("3. Показать инвентарь");
-    console.log("4. Выйти из магазина");
-    const choice = prompt("Введи число (1-4):");
-    if (choice === "1") {
-        console.log("\n==== Каталог игрушек ====");
-        for (let i = 0; i < toys.length; i++) {
-            console.log(${i + 1}. ${toys[i].name} - ${toys[i].price});
-        }
-        const toy_choice = parseInt(prompt("Введи число игрушки, которую хочешь купить:"));
-        if (!isNaN(toy_choice) && toy_choice >= 1 && toy_choice <= toys.length) {
-            const selected_toy = toys[toy_choice - 1];
-            player.buyToy(selected_toy);
-        } else {
-            console.log("Неправильный ввод, повтори попытку.");
-        }
-    } else if (choice === "2") {
-        player.showInventory();
-        const toy_choice = prompt("Введи название игрушки, которую хочешь продать:");
-        let found_toy = null;
-        for (const toy of player.inventory) {
-            if (toy.name.toLowerCase() === toy_choice.toLowerCase()) {
-                found_toy = toy;
-                break;
-            }
-        }
-        if (found_toy) {
-            player.sellToy(found_toy);
-        } else {
-            console.log("Игрушка не найдена, повтори попытку.");
-        }
-    } else if (choice === "3") {
-        player.showInventory();
-    } else if (choice === "4") {
-        console.log("Спасибо, что играете в игру Магазин игрушек. Пока!");
-        break;
-    } else {
-        console.log("Неправильный ввод, повторите попытку.");
+const buyButton = document.getElementById('buy-button');
+const sellButton = document.getElementById('sell-button');
+const inventoryButton = document.getElementById('inventory-button');
+const exitButton = document.getElementById('exit-button');
+const toyList = document.getElementById('toy-list');
+const inventoryList = document.getElementById('inventory-list');
+const messageContainer = document.getElementById('message-container');
+const messageText = document.getElementById('message');
+
+buyButton.addEventListener('click', showCatalog);
+sellButton.addEventListener('click', showInventory);
+inventoryButton.addEventListener('click', showInventory);
+exitButton.addEventListener('click', exitGame);
+
+function showCatalog() {
+    hideElement(inventoryContainer);
+    showElement(catalogContainer);
+    clearElement(toyList);
+
+    for (let i = 0; i < toys.length; i++) {
+        const toy = toys[i];
+        const listItem = document.createElement('li');
+        listItem.innerText = `${i + 1}. ${toy.name} - ${toy.price}`;
+        toyList.appendChild(listItem);
     }
+}
+
+function showInventory() {
+    hideElement(catalogContainer);
+    showElement(inventoryContainer);
+    clearElement(inventoryList);
+
+    for (const toy of player.inventory) {
+        const listItem = document.createElement('li');
+        listItem.innerText = toy.name;
+        inventoryList.appendChild(listItem);
+    }
+}
+
+function exitGame() {
+    showMessage(`Спасибо, что играли в игру "Магазин игрушек". Пока!`, 'info');
+    hideElement(gameContainer);
+}
+
+function showMessage(text, type) {
+    messageText.innerHTML = text;
+    messageContainer.className = `message ${type}`;
+    showElement(messageContainer);
+}
+
+function showElement(element) {
+    element.style.display = 'block';
+}
+
+function hideElement(element) {
+    element.style.display = 'none';
+}
+
+function clearElement(element) {
+    element.innerHTML = '';
 }

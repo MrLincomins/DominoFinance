@@ -14,12 +14,12 @@
     <div class="row mt-5">
 
         <!-- Карточка для дошкольного уровня -->
-        <div class="col-md-4">
-            <div class="card mb-4">
+        <div href="/games/toystore"  class="col-md-4">
+            <div href="/games/toystore" class="card mb-4">
                 <img href="/games/toystore" src="resources/photo/toystore.jpg" width="100" height="400" class="card-img-top" alt="Игра 1">
-                <div class="card-body">
+                <div href="/games/toystore" class="card-body">
                     <h5 href="/games/toystore" class="card-title">Магазин игрушек</h5>
-                    <p href="/games/toystore" class="card-text">Развивающая игра для долшколят</p>
+                    <p href="/games/toystore" class="card-text">Развивающая игра для дошколят</p>
                 </div>
             </div>
         </div>
@@ -27,10 +27,12 @@
         <!-- Карточка для школьного уровня -->
         <div class="col-md-4">
             <div class="card mb-4">
-                <img src="path_to_image2.jpg" class="card-img-top" alt="Игра 2">
+                <img src="resources/photo/compman.png" class="card-img-top" alt="CompanyMan">
                 <div class="card-body">
-                    <h5 class="card-title">Название игры 2</h5>
-                    <p class="card-text">Описание игры 2</p>
+                    <h5 class="card-title">CompanyMan</h5>
+                    <p class="card-text">Это компьютерная симуляция создания и развития компании. Игроку предоставляется возможность стать предпринимателем, создать свою компанию и развивать ее, стремясь к успеху и процветанию.
+
+                        В игре игрок может выполнять различные действия, такие как создание компании, улучшение ее работников, менеджмента и продукта. Каждое улучшение приносит дополнительный доход и повышает качество компании.</p>
                 </div>
             </div>
         </div>
@@ -40,7 +42,7 @@
             <div class="card mb-4">
                 <img src="path_to_image3.jpg" class="card-img-top" alt="Игра 3">
                 <div class="card-body">
-                    <h5 class="card-title">Название игры 3</h5>
+                    <h5 class="card-title">Финансовый квест</h5>
                     <p class="card-text">Описание игры 3</p>
                 </div>
             </div>

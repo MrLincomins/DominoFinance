@@ -1,8 +1,11 @@
+<?php use Illuminate\Support\Facades\Auth; ?>
 <link rel="stylesheet" href="resources/css/boostrap.min.css">
+<link rel="stylesheet" href="resources/css/project.css">
+
 <body>
 <!-- Навигационная панель -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Финансовая грамотность</a>
+    <a class="navbar-brand display-8" href="#">Домино Финанс</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,20 +21,32 @@
             <li class="nav-item">
                 <a class="nav-link" href="/games">Игры</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/account">Аккаунт</a>
-            </li>
+
+
+            <?php if (Auth::check()): ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/account">Аккаунт</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/account/logout">Выход</a>
+                </li>
+            <?php endif; ?>
+            <?php if (!Auth::check()): ?>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#registerModal">Регистрация</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#loginModal">Вход</a>
             </li>
+            <?php endif; ?>
+
         </ul>
     </div>
 </nav>
 
-
+<div class="loading-overlay">
+    <div class="loading-spinner"></div>
+</div>
 <!-- Модальное окно регистрации -->
 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
      aria-hidden="true">
@@ -103,48 +118,8 @@
         </div>
     </div>
 </div>
-<script>
-    const form = document.getElementById('registration');
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const name = formData.get('name');
-        const mail = formData.get('mail');
-        const password = formData.get('password');
-        const age = formData.get('age');
-        const level = formData.get('level');
-        const jsonData = JSON.stringify({'name' : name, 'mail' : mail, 'age' : age, 'level' : level, 'password' : password});
-
-        fetch('/account/registration', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: jsonData
-        })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
-    });
-
-    const formLogin = document.getElementById('login');
-    formLogin.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const formData = new FormData(formLogin);
-        const mail = formData.get('mail');
-        const password = formData.get('password');
-        const jsonDatal = JSON.stringify({'mail' : mail,  'password' : password});
-
-        fetch('/account/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: jsonDatal
-        })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
-    });
-</script>
 </body>
+<!-- Попап -->
+<div id="popup-message" class="alert alert-dismissible fade show" role="alert">
+    <span id="popup-message-text"></span>
+</div>

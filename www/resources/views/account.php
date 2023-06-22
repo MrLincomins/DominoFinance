@@ -1,4 +1,5 @@
 <?php require_once 'header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +17,10 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Данные пользователя</h5>
-                    <p><strong>ФИО:</strong> Имя Фамилия</p>
-                    <p><strong>Возраст:</strong> 10 лет</p>
-                    <p><strong>Почта:</strong> example@example.com</p>
-                    <p><strong>Уровни:</strong> 5 пройдено</p>
-                    <p><strong>Монетки:</strong> 100</p>
+                    <p><strong>ФИО:</strong> <?php echo($_COOKIE['name']); ?></p>
+                    <p><strong>Возраст:</strong> <?php echo($_COOKIE['age']); ?></p>
+                    <p><strong>Почта:</strong> <?php echo($_COOKIE['mail']); ?></p>
+                    <p><strong>Монетки:</strong><?php echo($_COOKIE['points']); ?></p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#changeDataModal">Изменить контактные данные</button>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="contact">
                     <div class="form-group">
                         <label for="fullName">ФИО</label>
                         <input type="text" class="form-control" id="fullName" required>
@@ -64,6 +64,6 @@
 
 </html>
 
-
-<?php require_once 'footer.php'; ?>
+<?php
+require_once 'footer.php'; ?>
 
