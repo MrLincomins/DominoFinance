@@ -54,7 +54,7 @@
             hint: "Бюджет - это список ваших доходов и расходов, который помогает планировать, на что вы тратите свои деньги"
         },
         {
-            question: "Какой процент налога с продаж берется в вашем штате?",
+            question: "Какой процент налога с продаж берется в вашей стране?",
             options: ["5%", "7%", "10%"],
             answer: "7%",
             hint: "Посмотрите налоговую ставку в вашем местном правительстве или в Интернете"
@@ -97,6 +97,7 @@
 
         if (used_puzzles.length === puzzles.length) {
             document.getElementById("answer-summary").innerHTML = "Игра окончена! Количество правильных ответов: " + correct_answers + "/" + puzzles.length;
+            sendPoints(100)
             document.getElementById("options-container").style.display = "none";
             document.getElementById("show-answers-button").style.display = "inline-block";
         } else {

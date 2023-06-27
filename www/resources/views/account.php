@@ -1,4 +1,6 @@
-<?php require_once 'header.php'; ?>
+<?php use Illuminate\Support\Facades\DB;
+
+require_once 'header.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Финансовая грамотность для детей - Аккаунт</title>
 </head>
-
+<?php $points1 =DB::select('SELECT points FROM users WHERE id = :id', ['id' => $_COOKIE['id']]);
+$points1 = json_decode(json_encode($points1[0]), true)['points'];
+?>
 <body>
 <div class="container">
     <h1 class="text-center mt-5">Аккаунт</h1>
@@ -20,14 +24,13 @@
                     <p><strong>ФИО:</strong> <?php echo($_COOKIE['name']); ?></p>
                     <p><strong>Возраст:</strong> <?php echo($_COOKIE['age']); ?></p>
                     <p><strong>Почта:</strong> <?php echo($_COOKIE['mail']); ?></p>
-                    <p><strong>Монетки:</strong><?php echo($_COOKIE['points']); ?></p>
+                    <p><strong>Монетки:</strong><?php echo($points1); ?></p>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#changeDataModal">Изменить контактные данные</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Модальное окно изменения контактных данных -->
 <div class="modal fade" id="changeDataModal" tabindex="-1" role="dialog" aria-labelledby="changeDataModalLabel"
      aria-hidden="true">

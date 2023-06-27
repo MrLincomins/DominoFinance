@@ -39,14 +39,16 @@
         </div>
     </div>
 </div>
+<?php if(@$_COOKIE['css'] == 'sponge'):?>
 <button id="aboba">Удалить стиль</button>
+<?php endif; ?>
 
 <script>
     // Функция для удаления куки
     function deleteCookie() {
         <?php echo setcookie('css', 'sponge', time()+0, "/"); ?>
         alert('Куки успешно удалены!');
-        location.reload();
+        location.reload();x
     }
 
     // Получаем кнопку по идентификатору

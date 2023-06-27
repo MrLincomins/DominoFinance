@@ -2931,3 +2931,239 @@
 2023/06/22 13:58:47 [notice] 34#34: exit
 2023/06/22 13:58:47 [notice] 35#35: exit
 2023/06/22 13:58:47 [notice] 1#1: signal 14 (SIGALRM) received
+2023/06/23 05:53:13 [notice] 1#1: using the "epoll" event method
+2023/06/23 05:53:13 [notice] 1#1: nginx/1.25.1
+2023/06/23 05:53:13 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/06/23 05:53:13 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2023/06/23 05:53:13 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/06/23 05:53:13 [notice] 1#1: start worker processes
+2023/06/23 05:53:13 [notice] 1#1: start worker process 28
+2023/06/23 05:53:13 [notice] 1#1: start worker process 29
+2023/06/23 05:53:13 [notice] 1#1: start worker process 30
+2023/06/23 05:53:13 [notice] 1#1: start worker process 31
+2023/06/23 05:53:13 [notice] 1#1: start worker process 32
+2023/06/23 05:53:13 [notice] 1#1: start worker process 33
+2023/06/23 05:53:13 [notice] 1#1: start worker process 34
+2023/06/23 05:53:13 [notice] 1#1: start worker process 35
+2023/06/23 06:56:38 [notice] 1#1: using the "epoll" event method
+2023/06/23 06:56:38 [notice] 1#1: nginx/1.25.1
+2023/06/23 06:56:38 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/06/23 06:56:38 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2023/06/23 06:56:38 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/06/23 06:56:38 [notice] 1#1: start worker processes
+2023/06/23 06:56:38 [notice] 1#1: start worker process 28
+2023/06/23 06:56:38 [notice] 1#1: start worker process 29
+2023/06/23 06:56:38 [notice] 1#1: start worker process 30
+2023/06/23 06:56:38 [notice] 1#1: start worker process 31
+2023/06/23 06:56:38 [notice] 1#1: start worker process 32
+2023/06/23 06:56:38 [notice] 1#1: start worker process 33
+2023/06/23 06:56:38 [notice] 1#1: start worker process 34
+2023/06/23 06:56:38 [notice] 1#1: start worker process 35
+2023/06/23 07:05:43 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/06/23 07:05:43 [notice] 28#28: gracefully shutting down
+2023/06/23 07:05:43 [notice] 32#32: gracefully shutting down
+2023/06/23 07:05:43 [notice] 30#30: gracefully shutting down
+2023/06/23 07:05:43 [notice] 31#31: gracefully shutting down
+2023/06/23 07:05:43 [notice] 29#29: gracefully shutting down
+2023/06/23 07:05:43 [notice] 33#33: gracefully shutting down
+2023/06/23 07:05:43 [notice] 35#35: gracefully shutting down
+2023/06/23 07:05:43 [notice] 34#34: gracefully shutting down
+2023/06/23 07:05:43 [notice] 28#28: exiting
+2023/06/23 07:05:43 [notice] 32#32: exiting
+2023/06/23 07:05:43 [notice] 30#30: exiting
+2023/06/23 07:05:43 [notice] 31#31: exiting
+2023/06/23 07:05:43 [notice] 33#33: exiting
+2023/06/23 07:05:43 [notice] 29#29: exiting
+2023/06/23 07:05:43 [notice] 35#35: exiting
+2023/06/23 07:05:43 [notice] 34#34: exiting
+2023/06/23 07:05:43 [notice] 28#28: exit
+2023/06/23 07:05:43 [notice] 32#32: exit
+2023/06/23 07:05:43 [notice] 30#30: exit
+2023/06/23 07:05:43 [notice] 31#31: exit
+2023/06/23 07:05:43 [notice] 33#33: exit
+2023/06/23 07:05:43 [notice] 29#29: exit
+2023/06/23 07:05:43 [notice] 35#35: exit
+2023/06/23 07:05:43 [notice] 34#34: exit
+2023/06/23 07:05:44 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2023/06/23 07:05:44 [notice] 1#1: worker process 29 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: worker process 30 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: worker process 34 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: worker process 35 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:05:44 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2023/06/23 07:05:44 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2023/06/23 07:05:44 [notice] 1#1: worker process 31 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:05:44 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2023/06/23 07:05:44 [notice] 1#1: worker process 28 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: worker process 32 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:05:44 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2023/06/23 07:05:44 [notice] 1#1: worker process 33 exited with code 0
+2023/06/23 07:05:44 [notice] 1#1: exit
+2023/06/23 07:11:42 [notice] 1#1: using the "epoll" event method
+2023/06/23 07:11:42 [notice] 1#1: nginx/1.25.1
+2023/06/23 07:11:42 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/06/23 07:11:42 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2023/06/23 07:11:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/06/23 07:11:42 [notice] 1#1: start worker processes
+2023/06/23 07:11:42 [notice] 1#1: start worker process 28
+2023/06/23 07:11:42 [notice] 1#1: start worker process 29
+2023/06/23 07:11:42 [notice] 1#1: start worker process 30
+2023/06/23 07:11:42 [notice] 1#1: start worker process 31
+2023/06/23 07:11:42 [notice] 1#1: start worker process 32
+2023/06/23 07:11:42 [notice] 1#1: start worker process 33
+2023/06/23 07:11:42 [notice] 1#1: start worker process 34
+2023/06/23 07:11:42 [notice] 1#1: start worker process 35
+2023/06/23 07:16:56 [error] 29#29: *42 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:16:56 [error] 28#28: *41 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:16:57 [error] 29#29: *42 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:17:04 [error] 28#28: *41 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:17:04 [error] 29#29: *44 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:17:04 [error] 28#28: *41 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:26 [error] 30#30: *69 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:26 [error] 30#30: *68 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:26 [error] 30#30: *68 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:29 [error] 31#31: *73 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:29 [error] 30#30: *71 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:29 [error] 30#30: *72 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:36 [error] 30#30: *72 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:36 [error] 31#31: *73 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:22:36 [error] 30#30: *72 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:23:50 [error] 30#30: *77 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:23:50 [error] 31#31: *81 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:23:50 [error] 30#30: *77 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:23:57 [error] 30#30: *77 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:23:57 [error] 31#31: *81 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:23:57 [error] 31#31: *81 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:07 [error] 30#30: *83 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:07 [error] 30#30: *85 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:07 [error] 31#31: *87 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:21 [error] 30#30: *89 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:21 [error] 30#30: *93 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:21 [error] 31#31: *94 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:32 [error] 31#31: *94 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:32 [error] 30#30: *96 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:24:32 [error] 31#31: *94 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:25:36 [error] 31#31: *110 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:25:36 [error] 31#31: *106 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:25:36 [error] 32#32: *111 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:29:42 [error] 32#32: *141 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:29:42 [error] 33#33: *142 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:29:42 [error] 32#32: *141 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:29:55 [error] 32#32: *141 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:29:55 [error] 33#33: *142 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:29:55 [error] 32#32: *141 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:30:06 [error] 33#33: *142 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:30:06 [error] 32#32: *147 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:30:06 [error] 32#32: *148 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:30:18 [error] 32#32: *147 open() "/var/www/resources/js/bootstrap.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/bootstrap.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:30:18 [error] 33#33: *142 open() "/var/www/resources/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/css/bootstrap.min.css.map HTTP/1.1", host: "localhost"
+2023/06/23 07:30:18 [error] 32#32: *148 open() "/var/www/resources/js/popper.min.js.map" failed (2: No such file or directory), client: 172.19.0.1, server: , request: "GET /resources/js/popper.min.js.map HTTP/1.1", host: "localhost"
+2023/06/23 07:36:57 [error] 33#33: *170 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 172.19.0.1, server: , request: "GET /account HTTP/1.1", upstream: "fastcgi://172.19.0.4:9000", host: "localhost", referrer: "http://localhost/store"
+2023/06/23 07:36:57 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/06/23 07:36:57 [notice] 28#28: gracefully shutting down
+2023/06/23 07:36:57 [notice] 30#30: gracefully shutting down
+2023/06/23 07:36:57 [notice] 30#30: exiting
+2023/06/23 07:36:57 [notice] 30#30: exit
+2023/06/23 07:36:57 [notice] 29#29: gracefully shutting down
+2023/06/23 07:36:57 [notice] 31#31: gracefully shutting down
+2023/06/23 07:36:57 [notice] 32#32: gracefully shutting down
+2023/06/23 07:36:57 [notice] 33#33: gracefully shutting down
+2023/06/23 07:36:57 [notice] 34#34: gracefully shutting down
+2023/06/23 07:36:57 [notice] 35#35: gracefully shutting down
+2023/06/23 07:36:57 [notice] 28#28: exiting
+2023/06/23 07:36:57 [notice] 29#29: exiting
+2023/06/23 07:36:57 [notice] 31#31: exiting
+2023/06/23 07:36:57 [notice] 32#32: exiting
+2023/06/23 07:36:57 [notice] 34#34: exiting
+2023/06/23 07:36:57 [notice] 35#35: exiting
+2023/06/23 07:36:57 [notice] 28#28: exit
+2023/06/23 07:36:57 [notice] 29#29: exit
+2023/06/23 07:36:57 [notice] 31#31: exit
+2023/06/23 07:36:57 [notice] 32#32: exit
+2023/06/23 07:36:57 [notice] 34#34: exit
+2023/06/23 07:36:57 [notice] 35#35: exit
+2023/06/23 07:36:58 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2023/06/23 07:36:58 [notice] 1#1: worker process 28 exited with code 0
+2023/06/23 07:36:58 [notice] 1#1: worker process 30 exited with code 0
+2023/06/23 07:36:58 [notice] 1#1: worker process 31 exited with code 0
+2023/06/23 07:36:58 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:36:58 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2023/06/23 07:36:58 [notice] 1#1: worker process 34 exited with code 0
+2023/06/23 07:36:58 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:36:58 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2023/06/23 07:36:58 [notice] 1#1: worker process 29 exited with code 0
+2023/06/23 07:36:58 [notice] 1#1: worker process 35 exited with code 0
+2023/06/23 07:36:58 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:36:58 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2023/06/23 07:36:58 [notice] 1#1: worker process 32 exited with code 0
+2023/06/23 07:36:58 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:38:02 [notice] 1#1: using the "epoll" event method
+2023/06/23 07:38:02 [notice] 1#1: nginx/1.25.1
+2023/06/23 07:38:02 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/06/23 07:38:02 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2023/06/23 07:38:02 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/06/23 07:38:02 [notice] 1#1: start worker processes
+2023/06/23 07:38:02 [notice] 1#1: start worker process 28
+2023/06/23 07:38:02 [notice] 1#1: start worker process 29
+2023/06/23 07:38:02 [notice] 1#1: start worker process 30
+2023/06/23 07:38:02 [notice] 1#1: start worker process 31
+2023/06/23 07:38:02 [notice] 1#1: start worker process 32
+2023/06/23 07:38:02 [notice] 1#1: start worker process 33
+2023/06/23 07:38:02 [notice] 1#1: start worker process 34
+2023/06/23 07:38:02 [notice] 1#1: start worker process 35
+2023/06/23 07:40:45 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/06/23 07:40:45 [notice] 32#32: gracefully shutting down
+2023/06/23 07:40:45 [notice] 31#31: gracefully shutting down
+2023/06/23 07:40:45 [notice] 34#34: gracefully shutting down
+2023/06/23 07:40:45 [notice] 30#30: gracefully shutting down
+2023/06/23 07:40:45 [notice] 28#28: gracefully shutting down
+2023/06/23 07:40:45 [notice] 29#29: gracefully shutting down
+2023/06/23 07:40:45 [notice] 29#29: exiting
+2023/06/23 07:40:45 [notice] 33#33: gracefully shutting down
+2023/06/23 07:40:45 [notice] 35#35: gracefully shutting down
+2023/06/23 07:40:45 [notice] 32#32: exiting
+2023/06/23 07:40:45 [notice] 31#31: exiting
+2023/06/23 07:40:45 [notice] 34#34: exiting
+2023/06/23 07:40:45 [notice] 30#30: exiting
+2023/06/23 07:40:45 [notice] 28#28: exiting
+2023/06/23 07:40:45 [notice] 29#29: exit
+2023/06/23 07:40:45 [notice] 33#33: exiting
+2023/06/23 07:40:45 [notice] 35#35: exiting
+2023/06/23 07:40:45 [notice] 32#32: exit
+2023/06/23 07:40:45 [notice] 31#31: exit
+2023/06/23 07:40:45 [notice] 34#34: exit
+2023/06/23 07:40:45 [notice] 30#30: exit
+2023/06/23 07:40:45 [notice] 28#28: exit
+2023/06/23 07:40:45 [notice] 33#33: exit
+2023/06/23 07:40:45 [notice] 35#35: exit
+2023/06/23 07:40:45 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2023/06/23 07:40:45 [notice] 1#1: worker process 30 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: worker process 31 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: worker process 32 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:40:45 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2023/06/23 07:40:45 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2023/06/23 07:40:45 [notice] 1#1: worker process 28 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: worker process 29 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: worker process 33 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: signal 29 (SIGIO) received
+2023/06/23 07:40:45 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2023/06/23 07:40:45 [notice] 1#1: worker process 34 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: worker process 35 exited with code 0
+2023/06/23 07:40:45 [notice] 1#1: exit
+2023/06/23 07:53:16 [notice] 1#1: using the "epoll" event method
+2023/06/23 07:53:16 [notice] 1#1: nginx/1.25.1
+2023/06/23 07:53:16 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/06/23 07:53:16 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2023/06/23 07:53:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/06/23 07:53:16 [notice] 1#1: start worker processes
+2023/06/23 07:53:16 [notice] 1#1: start worker process 28
+2023/06/23 07:53:16 [notice] 1#1: start worker process 29
+2023/06/23 07:53:16 [notice] 1#1: start worker process 30
+2023/06/23 07:53:16 [notice] 1#1: start worker process 31
+2023/06/23 07:53:16 [notice] 1#1: start worker process 32
+2023/06/23 07:53:16 [notice] 1#1: start worker process 33
+2023/06/23 07:53:16 [notice] 1#1: start worker process 34
+2023/06/23 07:53:16 [notice] 1#1: start worker process 35

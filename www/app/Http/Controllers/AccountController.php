@@ -87,6 +87,13 @@ class AccountController extends Controller
 
     public function endSession(): \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\Foundation\Application
     {
+        setcookie('css', 'sponge', time()+0, "/");
+        setcookie('id', 0, time()+0, "/");
+        setcookie('name', 0, time()+0, "/");
+        setcookie('age', 0, time()+0, "/");
+        setcookie('mail', 0,time()+0, "/");
+        setcookie('level', 0, time()+0, "/");
+        setcookie('points' , 0, time()+0, "/");
         Auth::logout();
         return redirect('/');
     } //Кайфырь
@@ -123,7 +130,7 @@ class AccountController extends Controller
         }
     }
 
-    public function storePoints(Request $request)
+    public function storePoints(Request $request): bool
     {
         $points1 = DB::select('SELECT points FROM users WHERE id = :id', ['id' => $_COOKIE['id']]);
         $points1 = json_decode(json_encode($points1[0]), true)['points'];
@@ -131,9 +138,10 @@ class AccountController extends Controller
 
         $user = User::find($_COOKIE['id']);
         if ($user) {
+            $this->cookieContactPoints($points1 + $points);
+
             $user->points = $points + $points1;
             $user->save();
-            $this->cookieContactPoints($points1 + $points);
             return true;
         } else {
             return false;
@@ -142,29 +150,33 @@ class AccountController extends Controller
 
     public function buyContent(Request $request): bool
     {
-        setcookie('css', 'sponge', time()+36000000, "/");
         $points1 = DB::select('SELECT points FROM users WHERE id = :id', ['id' => $_COOKIE['id']]);
         $points1 = json_decode(json_encode($points1[0]), true)['points'];
         $points = $request->json('points');
-        if($points1 > $points) {
+        if ($points1 > $points) {
             $user = User::find($_COOKIE['id']);
             if ($user) {
                 $user->points = $points1 - $points;
                 $user->save();
-                $this->cookieContactPoints($points1 - $points);
+                $this->cookieContactPoints1($points1 - $points);
                 return true;
             }
         } else {
             return False;
         }
+        return False;
     }
 
     public function cookieContactPoints($points): void
     {
-        setcookie('points' , $points, time()+36000000, "/");
-        setcookie('css', 'sponge', time()+36000000, "/");
+        setcookie('point' , $points, time()+36000000, "/");
     }
 
+    public function cookieContactPoints1($points): void
+    {
+        setcookie('point' , $points, time()+36000000, "/");
+        setcookie('css', 'sponge', time()+36000000, "/");
+    }
 
     public function checkSession(): void
     {

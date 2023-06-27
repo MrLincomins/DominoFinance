@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-<div class="container jumbotron" >
+<div class="container jumbotron">
     <h1>Бизнесменщик</h1>
 
     <div>
@@ -56,32 +56,13 @@
                 </div>
                 <div class="modal-body">
                     <button class="btn btn-default" type="button" data-toggle="tooltip" data-placement="top" title="Делает тебя <b>немного</b> счастливым" id="visitBtn">Сходить в гости <span id="visitPrice">$250</span></button>
-                    <button class="btn btn-default" type="button" data-toggle="tooltip" data-placement="top" title="Даёт <b>нормально</b> счастья" id="bathhouseBtn">Сходить к девочкам в баню <span id="bathhousePrice">$600</span></button>
-                    <button class="btn btn-default" type="button" data-toggle="tooltip" data-placement="top" title="Даёт <b>много</b> счастья" id="snakeGameBtn">Поиграть в змейку <span id="snakeGamePrice">$1000</span></button>
+                    <button class="btn btn-default" type="button" data-toggle="tooltip" data-placement="top" title="Делает тебя <b>очень</b> счастливым" id="partyBtn">Устроить вечеринку <span id="partyPrice">$500</span></button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="modal" id="purchasePopup">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Поздравляем!</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    Вы успешно приобрели новую компанию!
-                    Игра пройдена!!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="balance"></div>
-    <div id="income"></div>
-    <div id="happiness"></div>
-    <div id="level"></div>
 </div>
+
 <script>
 
     let balance = 5000;
@@ -305,7 +286,7 @@
     });
 
 </script>
-<script src="resources/js/points.js"></script>
 </body>
 </html>
+<script src="resources/js/points.js"></script>
 <?php require_once 'footer.php'; ?>
